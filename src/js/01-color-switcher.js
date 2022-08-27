@@ -8,7 +8,9 @@ function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-function onButtonStartClick() { 
+let intervalId = null;
+
+function onButtonStartClick() {
     buttonStart.disabled = true;
     intervalId = setInterval(() => {
         const hexColor = getRandomHexColor();
@@ -16,7 +18,7 @@ function onButtonStartClick() {
     }, 1000);
 }
 
-function onButtonStopClick() { 
+function onButtonStopClick() {
     clearInterval(intervalId);
     buttonStart.disabled = false;
 }

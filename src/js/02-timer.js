@@ -12,6 +12,7 @@ buttonStart.addEventListener('click', onButtonClick);
 
 buttonStart.disabled = true;
 let selectedDate = new Date();
+let intervalId = null;
 
 const options = {
     enableTime: true,
@@ -39,9 +40,9 @@ function onButtonClick() {
         if (deltaTime > 0) {
             const { days, hours, minutes, seconds } = convertMs(deltaTime);
             spanDay.textContent = days;
-            spanHours.textContent  = hours;
-            spanMinutes.textContent  = minutes;
-            spanSeconds.textContent  = seconds;
+            spanHours.textContent = hours;
+            spanMinutes.textContent = minutes;
+            spanSeconds.textContent = seconds;
         } else {
             clearInterval(intervalId);
         }
