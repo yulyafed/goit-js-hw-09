@@ -28,7 +28,7 @@ const options = {
         buttonStart.disabled = false;
         selectedDate = selectedDates[0];
     },
-};
+}
 
 flatpickr("#datetime-picker", options);
 
